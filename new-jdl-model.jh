@@ -1,0 +1,16 @@
+
+entity ExternalConfig{
+id String,
+description String,
+creatorUserId String,
+creationDate Date
+}
+entity Attribute{
+keyName String,
+keyType String,
+isSourceAccountAttribute Boolean
+isTargetAccountAttribute Boolean
+}
+relationship OneToMany {
+     ExternalConfig{attribute} to Attribute
+}
